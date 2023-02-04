@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #282c34;
+}
+
+div.react {
+    position: relative;
+
+    animation-name: react;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+div.react div.elipse{
+    width: 96vw;
+    height: 48vw;
+    max-width: 250px;
+    max-height: 100px;
+
+    border: 10px solid #61dafb;
+    border-radius: 50%;
+}
+
+div.react div.elipse:nth-of-type(1){
+    position: relative;
+}
+
+div.react div.elipse:nth-of-type(2){
+    position: absolute;
+    transform: rotate(60deg);
+    top: 0;
+}
+
+div.react div.elipse:nth-of-type(3){
+    position: absolute;
+    transform: rotate(-60deg);
+    top: 0;
+}
+
+div.react div.circulo{
+    width: 10vw;
+    height: 10vw;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: #61dafb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%
+}
+
+h1{
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+@keyframes react{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
